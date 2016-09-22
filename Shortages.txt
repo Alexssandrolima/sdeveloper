@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+	<title> Tela de Faltas </title>
+    <script type="text/javascript" src="js/faltas.js"></script>
+    <script type="text/javascript" src="js/faltasfunction.js"></script>
+
+<style>
+     h1{
+        text-decoration-line: underline;
+     	text-align: center;
+     	color: red;
+     	font-style: italic;
+     	font-size: 60px;
+     }
+    
+</style>
+
+</head>
+
+<body>
+
+<fieldset>
+    <h1> SHORTAGES </h1>
+</fieldset>
+
+<fieldset>
+<table>
+<legend> Data Shortages </legend>
+	<tr>
+		<th>Products</th>
+		<th>Quantities</th>
+		<th>Payment</th>
+	</tr>
+</table>
+</fieldset>
+<button onclick="register()">Register</button>
+
+</body>
+</html>
