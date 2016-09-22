@@ -1,0 +1,71 @@
+var getcustomer = new Array(); 
+
+
+function register() {
+
+	    	 name  = prompt("Nome Cliente");
+	         email = prompt("Endereço Entrega");
+	         phone = prompt("Contato Cliente");
+	         val   = prompt("Troco, Trocado ou Cartao ?");
+	         mobile= prompt("Crédito de Celular Sim ou Nao?");
+
+	getcustomer[getcustomer.length]=new Array(name, email, phone, val, mobile);
+	mostrarcontatos();
+}
+
+function mostrarcontatos() {
+	
+	getdemo=document.getElementById('demo');
+	screen="";
+
+	for(x=0; x<getcustomer.length; x++) {
+       
+		     name  = getcustomer[x][0];
+		     email = getcustomer[x][1];
+		     phone = getcustomer[x][2];
+			 val   = getcustomer[x][3];
+			 mobile= getcustomer[x][4];
+
+		screen=screen+"<tr><th>"+name+"</th><th>"+email+"</th><th>"+phone+"</th><th>"+val+"</th><th>"+mobile+"</th><span onclick='del("+x+")'>Delete</span><span onclick='change("+x+")'>Change</span></tr>"
+	}
+	getdemo.innerHTML=screen;
+
+}
+
+function change(change) {
+
+
+	    	 name  = prompt("Insert Name",  getcustomer[change][0]);
+	         email = prompt("Insert Email", getcustomer[change][1]);
+	         phone = prompt("Insert Phone", getcustomer[change][2]);
+	         val   = prompt("Insert Value", getcustomer[change][3]);
+	         mobile= prompt("Insert Number",getcustomer[change][4]);
+
+	getcustomer[change]=new Array(name, email, phone, val, mobile);
+	mostrarcontatos();
+
+}
+
+function del(change) {
+
+             name = getcustomer[change][0];
+
+	         if(confirm("You want delete this name ? "+name)) {
+
+	         ncontatos=new Array();
+	         for(x=0; x<getcustomer.length; x++) {
+
+	         	if (x != change) {
+
+	         		Ncontatos=[ncontatos.length]=getcustomer[x]
+	         	}
+	         	getcustomer=ncontatos;
+	         	mostrarcontatos();	
+	            }
+	         }
+}
+
+function back() {
+
+	window.location.replace("file:///C:/Users/Hugo/Desktop/javascript/3W1school.html");
+}
