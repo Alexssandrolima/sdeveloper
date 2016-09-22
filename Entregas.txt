@@ -1,0 +1,29 @@
+ var cont = 0; 
+ var data;
+
+function calculate() {
+     
+	var condutor = window.prompt(" Digite Nome do Condutor ");
+
+    if (condutor=="") {
+    	alert(" Digite Um Nome Válido !!")
+    }else if (condutor.lenght<3) {
+    	alert(" Nome Menor do que o Permitido !!")
+    }
+
+    var code = window.prompt(" Digite Código do Condutor ");
+
+    if (code=="") {
+    	alert(" Insira Código do Condutor ")
+    }else if (code<=0) {
+    	alert(" Código Inválido !!")
+    }else{
+    	alert(" Entrega Inserida com Sucesso !!")
+    	cont++;
+    	if (cont>2) {
+    		alert(" Limite de Cadastro Excedido !!")
+    		window.location.replace("file:///C:/Users/Hugo/Desktop/javascript/3Wschool.html");
+    	}
+    	return calculate();
+    }
+}
