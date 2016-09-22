@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+	<title> Cadastro De Empréstimos </title>
+	<link rel="stylesheet" type="text/css" href="css/CadEmprestimo.css">
+	<script type="text/javascript" src="js/CadEmprestimo.js"></script>
+</head>
+
+
+<body>
+
+    <fieldset>
+    <h1> REGISTER DELIVERY </h1>
+    <img src="img/motoboy2.jpg">
+    </fieldset>
+    
+    <br>
+    <fieldset>
+    <legend> Delivery Data </legend>
+    	<table>
+    		<tr>
+    			<th>Name of Customer	</th>
+    			<th>Adress of Delivery</th>
+    			<th>Contact Customer</th>
+    			<th>Value of Delivery</th>
+    			<th>Credit of Mobile</th>
+    		</tr>
+    		<tbody id="demo">
+    		</tbody>
+    	</table>	
+    </fieldset>    
+    <button onclick="register()">Register Delivery</button>
+    <button onclick="back()">Back Home</button>
+    <br>
+    <br>
+    
+
+</body>
+</html>
